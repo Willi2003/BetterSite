@@ -8,8 +8,6 @@ setInterval(() => {
 
 let clickMe = document.querySelector('#click')
 
-alert('WOW GG !')
-
-document.addEventListener('contextmenu', (event) => {
-    event.preventDefault()
+clickMe.addEventListener("click", () => {
+    alert('WOW GG !')
 })
