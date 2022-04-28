@@ -8,4 +8,6 @@ setInterval(() => {
 
 let clickMe = document.querySelector('#click')
 
-alert('WOW GG !')
+clickMe.addEventListener("click", () => {
+    alert('WOW GG !')
+})
