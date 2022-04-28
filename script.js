@@ -65,12 +65,36 @@ document.addEventListener('DOMContentLoaded', () => {
             glass.style.right = "16px"
         }
 
-        if (click.style.zIndex != 0) {
-            click.style.zIndex = 0
+        if (clickMe.style.zIndex != 0) {
+            clickMe.style.zIndex = 0
         } 
 
         if (glass.style.zIndex != 10) {
             glass.style.zIndex = 10
+        }
+
+        if (document.body.style.padding != "0px") {
+            document.body.style.padding = "0px"
+        }
+
+        if (clickMe.style.position != "unset") {
+            clickMe.style.position = "unset"
+        }
+
+        if (clickMe.style.marginTop != "24px") {
+            clickMe.style.marginTop = "24px"
+        }
+
+        if (clickMe.style.marginBottom != "34px") {
+            clickMe.style.marginBottom = "34px"
+        }
+
+        if (clickMe.style.marginLeft != "0") {
+            clickMe.style.marginLeft = "0"
+        }
+
+        if (clickMe.style.marginRight != "0") {
+            clickMe.style.marginRight = "0"
         }
 
     }, 100)
