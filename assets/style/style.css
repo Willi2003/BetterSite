@@ -12,7 +12,7 @@ body{
 
 #glass{
     width: 98vw;
-    height: 600px;
+    height: 120px;
     border-radius: 8px;
     backdrop-filter: blur(5px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.432);
@@ -25,4 +25,16 @@ body{
 p{
     font-size: 3em;
     color: white;
+}
+
+button {
+    width: 10%;
+    height: 100px;
+    background: transparent;
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
