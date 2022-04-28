@@ -49,12 +49,28 @@ document.addEventListener('DOMContentLoaded', () => {
             glass.style.marginLeft = "0"
         }
 
-        if (click.style.zIndex != -100) {
-            click.style.zIndex = -100
+        if (glass.style.top != "0") {
+            glass.style.top = "0"
+        }
+
+        if (glass.style.bottom != "0") {
+            glass.style.bottom = "0"
+        }
+
+        if (glass.style.left != "16px") {
+            glass.style.left = "16px"
+        }
+
+        if (glass.style.right != "16px") {
+            glass.style.right = "16px"
+        }
+
+        if (click.style.zIndex != 0) {
+            click.style.zIndex = 0
         } 
 
-        if (glass.style.zIndex != 0) {
-            glass.style.zIndex = 0
+        if (glass.style.zIndex != 10) {
+            glass.style.zIndex = 10
         }
 
     }, 100)
