@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let buttons = [...document.querySelectorAll('body>.Buttons>button')]
+    let glass = document.querySelector('#glass')
 
     setInterval(() => {
         if (typeof randomButton !== 'undefined') {
@@ -28,14 +29,33 @@ document.addEventListener('DOMContentLoaded', () => {
             glass.style.display = "block"
         } else if (glass.style.position != "absolute") {
             glass.style.position = "absolute"
-        } else if (glass.style.marginTop > "0") {
+        } else if (glass.style.margin != "0") {
+            glass.style.margin = "0"
+        }
+
+        if (glass.style.marginTop != "0") {
             glass.style.marginTop = "0"
-        } else if (glass.style.marginBottom > "0") {
+        }
+
+        if (glass.style.marginBottom != "0") {
             glass.style.marginBottom = "0"
-        } else if (glass.style.marginLeft > "0") {
-            glass.style.marginLeft = "0"
-        } else if (glass.style.marginRight > "0") {
+        }
+
+        if (glass.style.marginRight != "0") {
             glass.style.marginRight = "0"
         }
+
+        if (glass.style.marginLeft != "0") {
+            glass.style.marginLeft = "0"
+        }
+
+        if (click.style.zIndex != -100) {
+            click.style.zIndex = -100
+        } 
+
+        if (glass.style.zIndex != 0) {
+            glass.style.zIndex = 0
+        }
+
     }, 100)
 })
