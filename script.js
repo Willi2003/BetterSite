@@ -1,9 +1,9 @@
-let buttons = document.querySelectorAll('body>button')
+let buttons = document.querySelectorAll('body>.Buttons>button')
 
 setInterval(() => {
     randomButton = buttons[Math.floor(Math.random() * 1000)]
 
-    randomButton.style.backgroundColor = 'red'
+    randomButton.style.background = 'red'
 }, 1000)
 
 let clickMe = document.querySelector('#click')
