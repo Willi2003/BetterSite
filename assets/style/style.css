@@ -43,3 +43,38 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+/* Form Page */
+
+#form-body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+}
+
+#form-body > h1 {
+    align-self: self-end;
+    font-size: 0.2em;
+}
+
+#form-body > form{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#form-body > form > input[type=range] {
+    direction: rtl;
+}
+
+#form-body > form > label {
+    align-self: flex-end;
+}
+
+#form-body > form > input {
+    align-self: flex-start;
+}
