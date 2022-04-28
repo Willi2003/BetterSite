@@ -2,7 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let buttons = [...document.querySelectorAll('body>.Buttons>button')]
     let glass = document.querySelector('#glass')
 
-    setInterval(() => {
+    let randomButtonInterval
+    
+    randomButtonInterval = setInterval(() => {
+        randomButtonGenerator()
+    }, 10000)
+
+    function randomButtonGenerator() {
         if (typeof randomButton !== 'undefined') {
             let lastButton = randomButton
 
@@ -11,7 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
         randomButton = buttons[Math.floor(Math.random() * buttons.length) - 1]
 
         randomButton.style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
-    }, 10000)
+        randomButton.addEventListener('click', () => {
+            accessButton()
+        })
+    }
 
     let clickMe = document.querySelector('#click')
 
@@ -19,7 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('lol')
     })
 
-    setInterval(() => {
+    let blockAccess
+
+    function accessButton() {
+        clearInterval(blockAccess)
+        clearInterval(randomButtonInterval)
+
+        console.log('removed')
+    }
+
+    function removeAccessButton() {
+        blockAccess = setInterval(() => {
+            removeAccess()
+    
+        }, 100)
+
+        randomButtonInterval = randomButtonInterval = setInterval(() => {
+            randomButtonGenerator()
+        }, 10000)
+    }
+
+    removeAccessButton()
+    randomButtonGenerator()
+
+    function removeAccess() {
         glass = document.querySelector("#glass")
         if (typeof(glass) == 'undefined' || glass == null) {
             let newDiv = document.createElement("div")
@@ -96,6 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if (clickMe.style.marginRight != "0") {
             clickMe.style.marginRight = "0"
         }
-
-    }, 100)
+    }
 })
