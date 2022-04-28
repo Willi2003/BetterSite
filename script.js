@@ -1,13 +1,20 @@
-let buttons = document.querySelectorAll('body>.Buttons>button')
+document.addEventListener('DOMContentLoaded', () => {
+    let buttons = [...document.querySelectorAll('body>.Buttons>button')]
 
-setInterval(() => {
-    randomButton = buttons[Math.floor(Math.random() * 1000)]
+    setInterval(() => {
+        if (typeof randomButton !== 'undefined') {
+            let lastButton = randomButton
 
-    randomButton.style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
-}, 1000)
+            lastButton.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+        }
+        randomButton = buttons[Math.floor(Math.random() * buttons.length) - 1]
 
-let clickMe = document.querySelector('#click')
+        randomButton.style.backgroundColor = 'rgba(0, 0, 0, 1)'
+    }, 1000)
 
-clickMe.addEventListener("click", () => {
-    alert('WOW GG !')
+    let clickMe = document.querySelector('#click')
+
+    clickMe.addEventListener("click", () => {
+        alert('WOW GG !')
+    })
 })
