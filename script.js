@@ -5,3 +5,9 @@ setInterval(() => {
 
     randomButton.style.background = 'red'
 }, 1000)
+
+let clickMe = document.querySelector('#click')
+
+clickMe.addEventListener("click", () => {
+    alert('WOW GG !')
+})
