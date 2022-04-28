@@ -30,7 +30,6 @@ body{
     margin-bottom: 6vh;
     font-weight: bold;
     color: black;
-    z-index: -100;
 }
 
 .Buttons > button {
