@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         randomButton = buttons[Math.floor(Math.random() * buttons.length) - 1]
 
-        randomButton.style.backgroundColor = 'rgba(0, 0, 0, 1)'
+        randomButton.style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
     }, 1000)
 
     let clickMe = document.querySelector('#click')
