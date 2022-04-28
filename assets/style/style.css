@@ -21,12 +21,18 @@ body{
     position: absolute;
 }
 
-p{
+#click{
     font-size: 3em;
     color: white;
+    margin: 0;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    font-weight: bold;
+    color: black;
+    z-index: -100;
 }
 
-button {
+.Buttons > button {
     width: 10%;
     height: 100px;
     background-color: rgba(0, 0, 0, 0);

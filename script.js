@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
         randomButton = buttons[Math.floor(Math.random() * buttons.length) - 1]
 
         randomButton.style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
-    }, 1000)
+    }, 10000)
 
     let clickMe = document.querySelector('#click')
 
     clickMe.addEventListener("click", () => {
-        alert('WOW GG !')
+        console.log('lol')
     })
 
     setInterval(() => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (glass.style.marginTop != "0") {
             glass.style.marginTop = "0"
-        }
+        } 
 
         if (glass.style.marginBottom != "0") {
             glass.style.marginBottom = "0"
